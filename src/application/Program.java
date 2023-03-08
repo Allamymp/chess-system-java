@@ -11,7 +11,7 @@ public class Program {
 
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
-	
+
 		ChessMatch chessMatch = new ChessMatch();
 		UI.printBoard(chessMatch.getPieces());
 
