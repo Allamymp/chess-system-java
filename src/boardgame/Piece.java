@@ -20,6 +20,7 @@ public class Piece {
 	protected Board getBoard() {
 		return board;
 	}
+	
 	public boolean[][] possibleMoves() {
 		
 		return null;
