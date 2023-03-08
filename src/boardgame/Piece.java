@@ -3,23 +3,23 @@ package boardgame;
 public class Piece {
 	
 	protected Position position;
+	private Board board;
 	
 	
 	
 	
-	public Piece(Position position) {
-	 
-		this.position = position;
+ 
+	public Piece(Board board) {
+		
+		this.board = board;
+		this.position = null; // unnecessary declaration, made by remember.
 	}
 
-	public Position getPosition() {
-		return position;
-	}
 
-	public void setPosition(Position position) {
-		this.position = position;
+	
+	protected Board getBoard() {
+		return board;
 	}
-
 	public boolean[][] possibleMoves() {
 		
 		return null;
