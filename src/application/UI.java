@@ -94,33 +94,33 @@ public class UI {
 
 	private static void printPiece(ChessPiece piece, boolean background) {
 		if (background) {
-			System.out.print(ANSI_BLUE_BACKGROUND);
+			System.out.print(ANSI_GREEN_BACKGROUND);
 		}
     	if (piece == null) {
             System.out.print("-" + ANSI_RESET);
         }
         else {
-            if (piece.getColor() == Color.WHITE) {
-                System.out.print(ANSI_WHITE + piece + ANSI_RESET);
+            if (piece.getColor() == Color.BLUE) {
+                System.out.print(ANSI_BLUE + piece + ANSI_RESET);
             }
             else {
-                System.out.print(ANSI_YELLOW + piece + ANSI_RESET);
+                System.out.print(ANSI_RED + piece + ANSI_RESET);
             }
         }
         System.out.print(" ");
 	}
 	
 	private static void printCapturedPieces(List<ChessPiece> captured) {
-		List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
-		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
+		List<ChessPiece> blue = captured.stream().filter(x -> x.getColor() == Color.BLUE).collect(Collectors.toList());
+		List<ChessPiece> red = captured.stream().filter(x -> x.getColor() == Color.RED).collect(Collectors.toList());
 		System.out.println("Captured pieces:");
-		System.out.print("White: ");
-		System.out.print(ANSI_WHITE);
-		System.out.println(Arrays.toString(white.toArray()));
+		System.out.print("BLUE: ");
+		System.out.print(ANSI_BLUE);
+		System.out.println(Arrays.toString(blue.toArray()));
 		System.out.print(ANSI_RESET);
-		System.out.print("Black: ");
-		System.out.print(ANSI_YELLOW);
-		System.out.println(Arrays.toString(black.toArray()));
+		System.out.print("RED: ");
+		System.out.print(ANSI_RED);
+		System.out.println(Arrays.toString(red.toArray()));
 		System.out.print(ANSI_RESET);
 	}
 }
