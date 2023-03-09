@@ -1,6 +1,5 @@
 package chess.pieces;
 
-
 import boardgame.Board;
 import boardgame.Position;
 import chess.ChessMatch;
@@ -26,10 +25,10 @@ public class King extends ChessPiece {
 		return p == null || p.getColor() != getColor();
 	}
 	
-	/*private boolean testRookCastling(Position position) {
+	private boolean testRookCastling(Position position) {
 		ChessPiece p = (ChessPiece)getBoard().piece(position);
 		return p != null && p instanceof Rook && p.getColor() == getColor() && p.getMoveCount() == 0;
-	}*/
+	}
 	
 	@Override
 	public boolean[][] possibleMoves() {
@@ -86,7 +85,7 @@ public class King extends ChessPiece {
 		}
 
 		// #specialmove castling
-		/* if (getMoveCount() == 0 && !chessMatch.getCheck()) {
+		if (getMoveCount() == 0 && !chessMatch.getCheck()) {
 			// #specialmove castling kingside rook
 			Position posT1 = new Position(position.getRow(), position.getColumn() + 3);
 			if (testRookCastling(posT1)) {
@@ -106,7 +105,7 @@ public class King extends ChessPiece {
 					mat[position.getRow()][position.getColumn() - 2] = true;
 				}
 			}
-		}*/
+		}
 		
 		return mat;
 	}
