@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import chess.ChessMatch;
 import chess.ChessPiece;
-import chess.ChessPosition;
+import chess.ChessPosition;sss
 import chess.Color;
 
 public class UI {
@@ -52,7 +52,7 @@ public class UI {
 		}
 	}
 	
-	/*public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
+	public static void printMatch(ChessMatch chessMatch, List<ChessPiece> captured) {
 		printBoard(chessMatch.getPieces());
 		System.out.println();
 		printCapturedPieces(captured);
@@ -68,7 +68,7 @@ public class UI {
 			System.out.println("CHECKMATE!");
 			System.out.println("Winner: " + chessMatch.getCurrentPlayer());
 		}
-	}*/
+	}
 	
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i = 0; i < pieces.length; i++) {
